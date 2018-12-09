@@ -87,7 +87,7 @@ public class PipeBehaviorTeleportPower extends PipeBehaviorTeleport implements I
 				PipeFlowPower nearbyFlow = (PipeFlowPower) nearbyPipe.getFlow();
 				
 				// will uncomment when Buildcraft API is added
-				//nearbyFlow.requestPower(orientation.getOpposite(), value);
+				nearbyFlow.requestPower(orientation.getOpposite(), value);
 			}
 		}
 		return requested;

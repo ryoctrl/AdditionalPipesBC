@@ -12,6 +12,7 @@ import buildcraft.additionalpipes.pipes.PipeBehaviorPriorityInsertion;
 import buildcraft.additionalpipes.pipes.PipeBehaviorSwitch;
 import buildcraft.additionalpipes.pipes.PipeBehaviorTeleportFluids;
 import buildcraft.additionalpipes.pipes.PipeBehaviorTeleportItems;
+import buildcraft.additionalpipes.pipes.PipeBehaviorTeleportPower;
 import buildcraft.additionalpipes.pipes.PipeBehaviorWaterPump;
 import buildcraft.additionalpipes.utils.PipeCreator;
 import buildcraft.api.mj.MjAPI;
@@ -131,8 +132,8 @@ public class APPipeDefintions
 		liquidsTeleportPipeDef = new PipeDefinitionBuilder().flowFluid().idTexPrefix("pipe_fluids_teleport").logic(PipeBehaviorTeleportFluids::new, PipeBehaviorTeleportFluids::new).define();
 		liquidsTeleportPipeItem = PipeCreator.createPipeItem(liquidsTeleportPipeDef);
 		
-		//powerTeleportPipeDef = new PipeDefinitionBuilder().flowPower().idTexPrefix("pipe_power_teleport").logic(PipeBehaviorTeleportPower::new, PipeBehaviorTeleportPower::new).define();
-		//powerTeleportPipeItem = PipeCreator.createPipeItemAndRecipe(1, powerTeleportPipeDef, true, new Object[] {"dustRedstone", itemsTeleportPipeItem});
+		powerTeleportPipeDef = new PipeDefinitionBuilder().flowPower().idTexPrefix("pipe_power_teleport").logic(PipeBehaviorTeleportPower::new, PipeBehaviorTeleportPower::new).define();
+		powerTeleportPipeItem = PipeCreator.createPipeItem(powerTeleportPipeDef);
 		
 		itemsSwitchPipeDef = new PipeDefinitionBuilder().flowItem().idTexPrefix("pipe_items_switch").texSuffixes("_closed", "_open").logic(PipeBehaviorSwitch::new, PipeBehaviorSwitch::new).define();
 		itemsSwitchPipeItem = PipeCreator.createPipeItem(itemsSwitchPipeDef);
